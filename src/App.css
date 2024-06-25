@@ -1,0 +1,41 @@
+/* App.css */
+
+body {
+  font-family: 'Merriweather', serif;
+  background: url('https://www.guiadasemana.com.br/contentFiles/image/opt_w720h445/2017/08/FEA/55432_terraco-italia-nova-sala-nobre.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

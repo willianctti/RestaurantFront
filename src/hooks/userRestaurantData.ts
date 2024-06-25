@@ -1,21 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios"
 
-const API = 'https:/localhost:8080/'
+const API = 'http://localhost:8080/food'
 
 const fetchData = async () => {
-    const response = axios.get(API + '/food')
-    return response;
+  const response = await axios.get(API);
+  return response.data;
 }
 
 export function useUserRestaurantData() {
-    const query = useQuery({
-        queryKey: ['data'],
-        queryFn: fetchData
-    })
+  const query = useQuery({
+    queryKey: ['data'],
+    queryFn: fetchData
+  });
 
-    return {
-        ...query,
-        data: query.data?.data
-    }
+  console.log(query.data);
+
+  return {
+    ...query,
+    data: query.data
+  };
 }
